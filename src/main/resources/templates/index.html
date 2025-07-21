@@ -1,0 +1,184 @@
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+  <link
+          rel="stylesheet"
+          as="style"
+          onload="this.rel='stylesheet'"
+          href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900"
+  />
+
+  <title>Stitch Design</title>
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+</head>
+<body>
+<div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: "Work Sans", "Noto Sans", sans-serif;'>
+  <div class="layout-container flex h-full grow flex-col">
+    <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f0f2f5] px-10 py-3">
+      <div class="flex items-center gap-4 text-[#111418]">
+        <div class="size-4">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                    d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"
+                    fill="currentColor"
+            ></path>
+          </svg>
+        </div>
+        <h2 class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em]">ShortenIt</h2>
+      </div>
+      <div class="flex flex-1 justify-end gap-8">
+        <div class="flex items-center gap-9">
+          <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Início</a>
+          <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Recursos</a>
+          <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Preços</a>
+          <a class="text-[#111418] text-sm font-medium leading-normal" href="#">Suporte</a>
+        </div>
+        <div class="flex gap-2">
+          <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0c7ff2] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+          >
+            <span class="truncate">Cadastrar</span>
+          </button>
+          <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#f0f2f5] text-[#111418] text-sm font-bold leading-normal tracking-[0.015em]"
+          >
+            <span class="truncate">Entrar</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="px-40 flex flex-1 justify-center py-5">
+      <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+        <h2 class="text-[#111418] tracking-light text-[28px] font-bold leading-tight px-4 text-center pb-3 pt-5">Encurte suas URLs</h2>
+        <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
+          <label class="flex flex-col min-w-40 flex-1">
+            <input
+                    placeholder="Cole sua URL aqui"
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#111418] focus:outline-0 focus:ring-0 border-none bg-[#f0f2f5] focus:border-none h-14 placeholder:text-[#60758a] p-4 text-base font-normal leading-normal"
+                    value=""
+            />
+          </label>
+        </div>
+        <div class="flex px-4 py-3 justify-center">
+          <button
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#0c7ff2] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+          >
+            <span class="truncate">Encurtar</span>
+          </button>
+        </div>
+        <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Suas URLs encurtadas</h2>
+        <div class="px-4 py-3 @container">
+          <div class="flex overflow-hidden rounded-lg border border-[#dbe0e6] bg-white">
+            <table class="flex-1">
+              <thead>
+              <tr class="bg-white">
+                <th class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-120 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal">
+                  URL Original
+                </th>
+                <th class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-240 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal">
+                  URL Encurtada
+                </th>
+                <th class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-360 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal">
+                  Data de Criação
+                </th>
+                <th class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-480 px-4 py-3 text-left text-[#111418] w-[400px] text-sm font-medium leading-normal">Cliques</th>
+                <th class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-600 px-4 py-3 text-left text-[#111418] w-60 text-[#60758a] text-sm font-medium leading-normal">
+                  Ações
+                </th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr class="border-t border-t-[#dbe0e6]">
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">
+                  https://www.example.com/long-url-1
+                </td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">
+                  https://short.it/abc1
+                </td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-360 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">
+                  2024-01-15
+                </td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">123</td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-600 h-[72px] px-4 py-2 w-60 text-[#60758a] text-sm font-bold leading-normal tracking-[0.015em]">
+                  Copiar | QR Code
+                </td>
+              </tr>
+              <tr class="border-t border-t-[#dbe0e6]">
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">
+                  https://www.example.com/long-url-2
+                </td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">
+                  https://short.it/def2
+                </td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-360 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">
+                  2024-02-20
+                </td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">456</td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-600 h-[72px] px-4 py-2 w-60 text-[#60758a] text-sm font-bold leading-normal tracking-[0.015em]">
+                  Copiar | QR Code
+                </td>
+              </tr>
+              <tr class="border-t border-t-[#dbe0e6]">
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">
+                  https://www.example.com/long-url-3
+                </td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">
+                  https://short.it/ghi3
+                </td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-360 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">
+                  2024-03-25
+                </td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">789</td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-600 h-[72px] px-4 py-2 w-60 text-[#60758a] text-sm font-bold leading-normal tracking-[0.015em]">
+                  Copiar | QR Code
+                </td>
+              </tr>
+              <tr class="border-t border-t-[#dbe0e6]">
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">
+                  https://www.example.com/long-url-4
+                </td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">
+                  https://short.it/jkl4
+                </td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-360 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">
+                  2024-04-30
+                </td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">1011</td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-600 h-[72px] px-4 py-2 w-60 text-[#60758a] text-sm font-bold leading-normal tracking-[0.015em]">
+                  Copiar | QR Code
+                </td>
+              </tr>
+              <tr class="border-t border-t-[#dbe0e6]">
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-120 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">
+                  https://www.example.com/long-url-5
+                </td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-240 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">
+                  https://short.it/mno5
+                </td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-360 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">
+                  2024-05-05
+                </td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-480 h-[72px] px-4 py-2 w-[400px] text-[#60758a] text-sm font-normal leading-normal">1213</td>
+                <td class="table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-600 h-[72px] px-4 py-2 w-60 text-[#60758a] text-sm font-bold leading-normal tracking-[0.015em]">
+                  Copiar | QR Code
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <style>
+            @container(max-width:120px){.table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-120{display: none;}}
+            @container(max-width:240px){.table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-240{display: none;}}
+            @container(max-width:360px){.table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-360{display: none;}}
+            @container(max-width:480px){.table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-480{display: none;}}
+            @container(max-width:600px){.table-afba76ab-ce54-4075-b9be-5e4aa2672161-column-600{display: none;}}
+          </style>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
