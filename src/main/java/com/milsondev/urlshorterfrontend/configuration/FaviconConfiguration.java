@@ -16,7 +16,7 @@ public class FaviconConfiguration {
         SimpleUrlHandlerMapping mapping = new SimpleUrlHandlerMapping();
         mapping.setOrder(Integer.MIN_VALUE);
         mapping.setUrlMap(Collections.singletonMap(
-                "/static/favicon.ico", faviconRequestHandler()));
+                "/favicon.ico", faviconRequestHandler()));
         return mapping;
     }
 
@@ -24,7 +24,7 @@ public class FaviconConfiguration {
     protected ResourceHttpRequestHandler faviconRequestHandler() {
         ResourceHttpRequestHandler requestHandler
                 = new ResourceHttpRequestHandler();
-        requestHandler.setLocations(Collections.singletonList(new ClassPathResource("/")));
+        requestHandler.setLocations(Collections.singletonList(new ClassPathResource("/static/")));
         return requestHandler;
     }
 

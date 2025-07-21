@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class UrlShorterFrontEndApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(UrlShorterFrontEndApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(UrlShorterFrontEndApplication.class, args);
+    }
 
 }
