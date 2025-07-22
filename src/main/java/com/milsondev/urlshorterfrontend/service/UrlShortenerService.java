@@ -18,11 +18,11 @@ import org.springframework.http.HttpStatus;
 import java.util.List;
 
 @Service
-@ConditionalOnProperty(value = "url.shortner.api")
+@ConditionalOnProperty(value = "url.shortener")
 public class UrlShortenerService {
 
-	@Value("${url.shortner.api}")
-	protected String urlShortnerApi;
+	@Value("${url.shortener}")
+	protected String urlShortenerService;
 
 	@Value("${host.name:http://localhost:8080}")
 	protected String hostName;
@@ -34,7 +34,7 @@ public class UrlShortenerService {
 	public void createShortUrl(UrlCreate urlCreate) {
 		try {
 			LOGGER.info("Creating short URL for: {}", urlCreate.getOriginalUrl());
-			String url = urlShortnerApi;
+			String url = urlShortenerService;
 			UrlGet response = restTemplate.postForObject(url, urlCreate, UrlGet.class);
 			if (response == null) {
 				LOGGER.error("Failed to create short URL: API returned null");
@@ -50,7 +50,7 @@ public class UrlShortenerService {
 	public String resolveShortCode(String shortCode) {
 		try {
 			LOGGER.info("Resolving short code: {}", shortCode);
-			String originalUrl = restTemplate.getForObject(urlShortnerApi + "/" + shortCode, String.class);
+			String originalUrl = restTemplate.getForObject(urlShortenerService + "/" + shortCode, String.class);
 			if (originalUrl == null) {
 				LOGGER.error("Short code not found: {}", shortCode);
 				throw new HttpClientErrorException(HttpStatus.NOT_FOUND, "Short code not found");
@@ -69,7 +69,7 @@ public class UrlShortenerService {
 	public void deleteById(UUID id) {
 		try {
 			LOGGER.info("Deleting URL with ID: {}", id);
-			final String url = urlShortnerApi + "/" + id;
+			final String url = urlShortenerService + "/" + id;
 			restTemplate.delete(url);
 			LOGGER.info("Successfully deleted URL with ID: {}", id);
 		} catch (HttpClientErrorException ex) {
@@ -81,7 +81,7 @@ public class UrlShortenerService {
 	public List<UrlGet> findAllPaginated(int page, int size) {
 		try {
 			LOGGER.info("Fetching paginated URLs: page={}, size={}", page, size);
-			String url = urlShortnerApi + "?page=" + page + "&size=" + size;
+			String url = urlShortenerService + "?page=" + page + "&size=" + size;
 			UrlGet[] response = restTemplate.getForObject(url, UrlGet[].class);
 			if (response == null) {
 				LOGGER.error("No URLs found for page={} and size={}", page, size);
